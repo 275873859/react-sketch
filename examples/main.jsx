@@ -235,7 +235,8 @@ class SketchFieldDemo extends React.Component {
     this._sketch.removeSelected()
   };
 
-  _onSketchChange = () => {
+  _onSketchChange = (type,e) => {
+    console.log('zxj::_onSketchChange',type,e);
     let prev = this.state.canUndo;
     let now = this._sketch.canUndo();
     if (prev !== now) {
